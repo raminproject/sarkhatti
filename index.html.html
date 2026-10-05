@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>سرخطی؛ بهتر تصمیم بگیر</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0D1B2A;--teal:#0F766E;--gold:#D4AF37;--bg:#F7F8FA;--card:#fff;--text:#0D1B2A;--mut:#5b6675;--bd:#e4e8ee;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1420;--card:#111f30;--text:#eef2f6;--mut:#9aa7b6;--bd:#223247}}
+:root[data-theme="dark"]{--bg:#0a1420;--card:#111f30;--text:#eef2f6;--mut:#9aa7b6;--bd:#223247}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--text);font-family:Vazirmatn,Tahoma,sans-serif;line-height:1.9}
+a{color:inherit;text-decoration:none}
+.w{max-width:1120px;margin:auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--navy);color:#fff}
+header .w{display:flex;align-items:center;gap:24px;height:64px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:700;font-size:20px}
+nav{display:flex;gap:20px;font-size:14px;margin-inline-start:auto;opacity:.9}
+.btn{display:inline-block;border-radius:12px;padding:10px 20px;font-weight:500;font-size:15px;border:1px solid transparent;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(15,118,110,.25)}
+.p{background:var(--teal);color:#fff}.o{border-color:rgba(255,255,255,.35);color:#fff}.o.l{border-color:var(--bd);color:var(--text)}
+.hero{background:linear-gradient(160deg,var(--navy),#12304a);color:#fff;padding:64px 0}
+.hero .w{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+h1{font-size:clamp(28px,4.4vw,46px);line-height:1.5;font-weight:700}
+.hero p{color:#c6d1dd;margin:16px 0 28px;max-width:520px}
+.tag{color:var(--gold);font-weight:500;font-size:14px;margin-bottom:10px}
+sec,section{display:block;padding:56px 0}
+h2{font-size:28px;margin-bottom:8px}.sub{color:var(--mut);margin-bottom:28px}
+.g{display:grid;gap:16px}.g5{grid-template-columns:repeat(5,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}
+.c{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:20px;box-shadow:0 2px 10px rgba(13,27,42,.04);transition:transform .2s,box-shadow .2s}
+.c:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(13,27,42,.1)}
+.c h3{font-size:17px;margin:8px 0 2px}.c p{color:var(--mut);font-size:14px;line-height:1.8}
+.ic{width:40px;height:40px;border-radius:12px;background:rgba(15,118,110,.12);color:var(--teal);display:grid;place-items:center;font-size:20px}
+.n{width:32px;height:32px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.chip{border:1px solid var(--bd);background:var(--card);color:var(--text);border-radius:99px;padding:6px 16px;font:inherit;font-size:14px;cursor:pointer}
+.chip.on{background:var(--teal);color:#fff;border-color:var(--teal)}
+.av{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--navy));color:#fff;display:grid;place-items:center;font-weight:700;font-size:20px}
+.top{display:flex;gap:12px;align-items:center}
+.ver{color:var(--teal);font-size:12px;font-weight:500}
+.meta{display:flex;gap:12px;font-size:13px;color:var(--mut);margin:12px 0;flex-wrap:wrap}
+.st{color:var(--gold)}
+.tg span{display:inline-block;background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:0 10px;font-size:12px;margin:0 0 6px 6px}
+.ft{display:flex;justify-content:space-between;align-items:center;margin-top:10px;font-size:14px}
+.q{background:var(--navy);color:#fff;border-radius:24px;padding:36px}
+.q .opts{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+.q .chip{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}.q .chip.on{background:var(--teal)}
+.bar{height:6px;background:rgba(255,255,255,.15);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--gold);width:0;transition:width .4s}
+.cta{background:linear-gradient(160deg,var(--navy),#12304a);color:#fff;border-radius:24px;padding:44px;text-align:center}
+footer{background:var(--navy);color:#b8c4d1;padding:40px 0 24px;font-size:14px}
+footer .g{grid-template-columns:2fr 1fr 1fr 1fr}footer b{color:#fff;display:block;margin-bottom:6px}
+.dis{border-top:1px solid #223247;margin-top:24px;padding-top:16px;font-size:12px;line-height:1.9}
+@media(max-width:860px){.hero .w,.g5,.g4,.g3,footer .g{grid-template-columns:1fr 1fr}.hero .w{grid-template-columns:1fr}nav{display:none}header .btn.o{margin-inline-start:auto}}
+@media(max-width:520px){.g5,.g4,.g3,footer .g{grid-template-columns:1fr}.q,.cta{padding:24px}}
+.mock{position:relative;min-height:290px}.mc{background:var(--card);color:var(--text);border-radius:18px;padding:18px;box-shadow:0 20px 40px rgba(0,0,0,.25);position:relative}
+.m2{width:75%;margin:16px 0 0 auto;transform:rotate(-1.5deg)}.m3{width:fit-content;margin:16px auto 0;background:var(--gold);color:var(--navy);font-size:13px;font-weight:700;padding:8px 16px;border-radius:99px}
+.ring{margin-inline-start:auto;width:56px;height:56px;border-radius:50%;background:conic-gradient(var(--teal) 94%,var(--bd) 0);display:grid;place-items:center;font-weight:700;font-size:13px;position:relative}.ring small{position:absolute;bottom:-18px;font-size:10px;color:var(--mut);font-weight:400}
+.view{display:none}.view.on{display:block}.pg{padding:40px 0 64px}.bc{font-size:13px;color:var(--mut);margin-bottom:16px}
+.two{display:grid;grid-template-columns:1.6fr 1fr;gap:20px}.stk{display:grid;gap:16px;align-content:start}
+.days,.slots{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.on2{background:var(--teal)!important;color:#fff!important;border-color:var(--teal)!important}
+.inp{width:100%;padding:12px 14px;border:1px solid var(--bd);border-radius:12px;font:inherit;background:var(--bg);color:var(--text);margin:6px 0 14px}
+.tabs{display:flex;gap:8px;margin-bottom:16px}.dsh{display:grid;grid-template-columns:200px 1fr;gap:20px}.side{display:grid;gap:4px;align-content:start}.side a{padding:10px 14px;border-radius:10px;font-size:14px;color:var(--mut)}.side a.a{background:var(--card);color:var(--teal);font-weight:700;border:1px solid var(--bd)}
+.stat{font-size:26px;font-weight:700}.prog{height:8px;background:var(--bd);border-radius:9px;overflow:hidden;margin:8px 0}.prog i{display:block;height:100%;background:var(--teal)}
+.emp{text-align:center;padding:24px;border:1px dashed var(--bd);border-radius:14px;color:var(--mut);font-size:14px}.err{background:rgba(190,40,40,.1);border:1px solid rgba(190,40,40,.35);color:#b42318;border-radius:12px;padding:12px;font-size:14px}
+.sk{height:14px;border-radius:7px;background:linear-gradient(90deg,var(--bd),transparent,var(--bd));background-size:200% 100%;animation:sh 1.2s infinite;margin:8px 0}@keyframes sh{to{background-position:-200% 0}}
+.pill{font-size:12px;border-radius:99px;padding:2px 10px;background:rgba(212,175,55,.2)}.rw{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid var(--bd);font-size:14px}
+@media(max-width:860px){.two,.dsh{grid-template-columns:1fr}.side{grid-auto-flow:column;overflow-x:auto}}
+.bn{display:none}@media(max-width:700px){.bn{display:flex;position:fixed;bottom:0;inset-inline:0;background:var(--card);border-top:1px solid var(--bd);justify-content:space-around;padding:8px 0 calc(8px + env(safe-area-inset-bottom,0px));font-size:12px;z-index:9}body{padding-bottom:64px}}
+.sg{display:grid;grid-template-columns:240px 1fr;gap:20px}.fl{display:grid;gap:4px;align-content:start}.fl label{font-size:13px;color:var(--mut)}.fl .inp{margin:0 0 10px}
+.hb{background:none;border:0;font-size:20px;cursor:pointer;color:var(--gold);margin-inline-start:auto}.cmp{display:flex;gap:6px;align-items:center;font-size:12px;color:var(--mut)}
+.tb{width:100%;border-collapse:collapse;font-size:14px}.tb td,.tb th{padding:10px;border-bottom:1px solid var(--bd);text-align:right}
+details.c{cursor:pointer}details summary{font-weight:700}.lg{white-space:pre-line;color:var(--mut);font-size:14px}.qq{margin-bottom:14px}.qq .chips{margin:6px 0}
+@media(max-width:860px){.sg{grid-template-columns:1fr}}</style>
+</head>
+<body>
+<header><div class="w">
+<a class="logo" href="#"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="3" y="18" width="5" height="11" rx="2" fill="#0F766E"/><rect x="11" y="12" width="5" height="17" rx="2" fill="#0F766E"/><rect x="19" y="6" width="5" height="23" rx="2" fill="#0F766E"/><path d="M3 11C10 11 18 6 28 3m0 0-5 0m5 0 0 5" stroke="#D4AF37" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>سرخطی</a>
+<nav><a href="#/">خانه</a><a href="#/search">مشاوران</a><a href="#/risk">تطبیق هوشمند</a><a href="#/dash">داشبورد</a><a href="#/advdash">پنل مشاور</a><a href="#how">خدمات</a><a href="#/mag">مجله</a><a href="#">درباره سرخطی</a></nav>
+<a class="btn o" href="#/login">ورود</a><a class="btn p" href="#/search">پیدا کردن مشاور</a>
+</div></header>
+
+<main id="home" class="view on"><div class="hero"><div class="w">
+<div><div class="tag">سرخطی؛ بهتر تصمیم بگیر.</div>
+<h1>برای تصمیم‌های مالی مهم، تنها تصمیم نگیر.</h1>
+<p>در سرخطی، مشاور مالی و سرمایه‌گذاری مناسب خودت را پیدا کن، تخصص و سابقه او را بررسی کن و برای تصمیم مالی‌ات مشورت بگیر.</p>
+<a class="btn p" href="#/search">پیدا کردن مشاور</a> <a class="btn o" href="#cta">من مشاورم</a></div>
+<div class="mock"><div class="mc"><div class="top"><div class="av">م.ر</div><div><b>محمد رضایی</b><div style="font-size:12px;color:var(--mut)">مشاور سرمایه‌گذاری · نمونه</div></div><div class="ring">۹۴٪<small>تطبیق</small></div></div>
+<div class="tg" style="margin-top:12px"><span>مدیریت ریسک</span><span>صندوق‌ها</span><span>بلندمدت</span></div>
+<div class="ft"><span style="color:var(--mut);font-size:13px">اولین وقت آزاد: فردا ۱۶:۰۰</span><span class="btn p" style="padding:6px 14px">رزرو</span></div></div>
+<div class="mc m2"><span class="ver">✓ هویت تأییدشده</span><div style="font-size:13px;margin-top:4px">«بعد از جلسه، تصمیمم شفاف‌تر شد.»<br><span class="st">★★★★★</span> <span style="color:var(--mut)">نمونه نظر</span></div></div>
+<div class="mc m3">نیاز ← تطبیق ← مشاوره ← تصمیم</div></div>
+</div></div>
+
+<section><div class="w"><h2>چرا سرخطی؟</h2><div class="sub">پنج اصلی که در هر مرحله همراه توست.</div>
+<div class="g g5">
+<div class="c"><div class="ic">◈</div><h3>اعتماد</h3><p>امنیت و شفافیت در هر مرحله</p></div>
+<div class="c"><div class="ic">✦</div><h3>تخصص</h3><p>شبکه‌ای از مشاوران متخصص و مستقل</p></div>
+<div class="c"><div class="ic">⚖</div><h3>بی‌طرفی</h3><p>ارائه مشاوره در جهت منافع کاربر</p></div>
+<div class="c"><div class="ic">◉</div><h3>آگاهی</h3><p>ارتقای کیفیت تصمیم‌های مالی</p></div>
+<div class="c"><div class="ic">↗</div><h3>رشد</h3><p>همراهی در مسیر رشد مالی پایدار</p></div>
+</div></div></section>
+
+<section id="how" style="padding-top:0"><div class="w"><h2>سرخطی چگونه کار می‌کند؟</h2><div class="sub">نیاز ← تطبیق ← مشاوره ← تصمیم</div>
+<div class="g g4">
+<div class="c"><div class="n">۱</div><h3>نیازت را مشخص کن</h3><p>بگو برای چه تصمیم مالی به کمک نیاز داری.</p></div>
+<div class="c"><div class="n">۲</div><h3>مشاور مناسب را پیدا کن</h3><p>مشاوران را بر اساس تخصص و سابقه بررسی کن.</p></div>
+<div class="c"><div class="n">۳</div><h3>مشاوره بگیر</h3><p>جلسه رزرو کن و وضعیت خودت را مطرح کن.</p></div>
+<div class="c"><div class="n">۴</div><h3>بهتر تصمیم بگیر</h3><p>با مشورت حرفه‌ای، آگاهانه‌تر تصمیم بگیر.</p></div>
+</div></div></section>
+
+<section id="advisors" style="padding-top:0"><div class="w"><h2>مشاور مناسب خودت را پیدا کن</h2><div class="sub">نمونه پروفایل‌های فرضی برای نمایش طراحی؛ واقعی نیستند.</div>
+<div class="chips" id="chips"></div><div class="g g3" id="list"></div></div></section>
+
+<section style="padding-top:0"><div class="w"><div class="q"><div class="tag">تطبیق هوشمند</div><h2>مشاور مناسب موضوع، بودجه و ریسک‌پذیری تو کدام است؟</h2><p style="color:#c6d1dd;margin:8px 0 20px">با هشت پرسش کوتاه، مشاوران را بر اساس نیازت مرتب می‌کنیم؛ بدون وعده‌ی سود.</p><a class="btn p" href="#/risk">شروع پرسشنامه</a></div></div></section>
+
+<section id="mag" style="padding-top:0"><div class="w"><h2>مجله سرخطی</h2><div class="sub">آموزش مالی برای تصمیم بهتر؛ نه سیگنال و پیش‌بینی.</div>
+<div class="g g4">
+<a class="c" href="#"><p>سرمایه‌گذاری</p><h3>چگونه مشاور مالی مناسب خود را انتخاب کنیم؟</h3></a>
+<a class="c" href="#"><p>آموزش مالی</p><h3>تفاوت مشاوره سرمایه‌گذاری با سیگنال‌فروشی چیست؟</h3></a>
+<a class="c" href="#"><p>بازار سرمایه</p><h3>قبل از سرمایه‌گذاری چه اطلاعاتی باید داشته باشیم؟</h3></a>
+<a class="c" href="#"><p>مدیریت ریسک</p><h3>چگونه میزان ریسک‌پذیری خود را ارزیابی کنیم؟</h3></a>
+</div></div></section>
+
+<section id="cta" style="padding-top:0"><div class="w"><div class="cta">
+<div class="tag">اول سرخطی. بعد تصمیم.</div><h2>مشاور هستید؟ به شبکه سرخطی بپیوندید</h2>
+<p style="color:#c6d1dd;margin:8px 0 24px">پروفایل حرفه‌ای بسازید، تقویم خود را مدیریت کنید و با کاربران جدی مشاوره برگزار کنید.</p>
+<a class="btn p" href="#/login">ثبت‌نام به عنوان مشاور</a> <a class="btn o" href="#/search">پیدا کردن مشاور</a></div></div></section>
+
+</main>
+
+<main id="advisor" class="view"><div class="w pg"><div class="bc"><a href="#/search">مشاوران</a> / <span id="bn"></span></div><div class="two"><div class="stk">
+<div class="c"><div class="top"><div class="av" id="pa" style="width:72px;height:72px"></div><div><h2 id="pn" style="margin:0;font-size:22px"></h2><div id="pt" style="color:var(--mut)"></div><div class="ver">✓ هویت و مدرک تأییدشده (نمونه)</div></div><button class="hb" id="pf">♡</button></div><div class="meta" id="pm"></div><p id="pb"></p><div class="tg" id="pg" style="margin-top:10px"></div></div>
+<div class="c"><h3>سوابق</h3><div id="pe"></div></div>
+<div class="c"><h3>چرا این مشاور؟</h3><p id="pw"></p></div>
+<div class="c"><h3>نظرات کاربران تأییدشده</h3><div class="rw"><span>«توضیحات روشن و بی‌طرفانه بود.»</span><span class="st">★★★★★</span></div><div class="rw"><span>«وقت‌شناس و دقیق.»</span><span class="st">★★★★☆</span></div></div></div>
+<div class="c" style="position:sticky;top:80px"><h3>جلسه مشاوره</h3><p id="ps"></p><div class="days" id="days"></div><div class="slots" id="slots"></div><button class="btn p" id="book" style="width:100%">رزرو جلسه</button><p id="bm" style="margin-top:10px;color:var(--teal)"></p><p style="font-size:12px;margin-top:10px">رزرو، پیشنهاد یا تضمین سرمایه‌گذاری نیست.</p></div></div></div></main>
+<main id="article" class="view"><div class="w pg" style="max-width:680px"><div class="bc"><a href="#/mag">مجله</a> / <span id="an"></span></div><span class="pill" id="ac"></span><h1 id="at" style="font-size:30px;margin:10px 0"></h1><div id="ab" style="color:var(--mut)"></div><div class="c" style="margin-top:28px"><b>برای تصمیم مالی خودت مشورت می‌خواهی؟</b><br><a class="btn p" style="margin-top:10px" href="#/risk">پیدا کردن مشاور</a></div><p style="font-size:12px;margin-top:16px;color:var(--mut)">این مقاله آموزشی و نمونه است و توصیه‌ی سرمایه‌گذاری نیست.</p></div></main>
+
+<main id="login" class="view"><div class="w pg" style="max-width:440px"><div class="c"><div class="tabs"><button class="chip on" data-t="0">ورود</button><button class="chip" data-t="1">ثبت‌نام</button></div>
+<label>شماره موبایل</label><input class="inp" dir="ltr" placeholder="09xxxxxxxxx" inputmode="numeric"><div id="reg" style="display:none"><label>نقش شما</label><div class="chips"><button class="chip on">دنبال مشاور هستم</button><button class="chip">مشاورم</button></div><label><input type="checkbox"> قوانین، حریم خصوصی و افشای ریسک را می‌پذیرم</label><br><br></div>
+<button class="btn p" style="width:100%" id="otp">دریافت کد تأیید</button><p id="om" class="err" style="display:none;margin-top:12px">شماره موبایل معتبر نیست. دوباره تلاش کنید.</p></div></div></main>
+
+<main id="dash" class="view"><div class="w pg"><div class="dsh"><div class="side"><a class="a" href="#/dash">داشبورد</a><a>مشاوران من</a><a>جلسات</a><a>پیام‌ها</a><a>پرداخت‌ها</a><a href="#/dash">علاقه‌مندی‌ها</a><a href="#/risk">ارزیابی ریسک</a><a href="#/advdash">پنل مشاور ←</a></div>
+<div class="stk"><div class="c"><b>جلسه‌ی پیش‌رو</b><div class="rw"><span>محمد رضایی (نمونه) · ۶۰ دقیقه</span><span class="pill">فردا ۱۶:۰۰</span></div><a class="btn p" style="padding:6px 14px">ورود به جلسه</a></div>
+<div class="c"><b>تکمیل پروفایل مالی</b><div class="prog"><i style="width:60%"></i></div><p>۶۰٪ تکمیل شده؛ ارزیابی ریسک را کامل کنید تا تطبیق دقیق‌تر شود.</p></div>
+<div class="g g3"><div class="c"><b>علاقه‌مندی‌ها</b><div id="fv"></div><div class="emp" id="fe0" style="margin-top:8px">هنوز مشاوری ذخیره نکرده‌اید.<br><a class="btn p" style="padding:4px 12px;margin-top:8px" href="#/search">پیدا کردن مشاور</a></div></div>
+<div class="c"><b>در حال بارگذاری</b><div class="sk"></div><div class="sk" style="width:60%"></div></div>
+<div class="c"><b>اعلان‌ها</b><div class="err" style="margin-top:8px">پرداخت جلسه‌ی قبل ناموفق بود. <a style="text-decoration:underline">تلاش دوباره</a></div></div></div></div></div></div></main>
+
+<main id="advdash" class="view"><div class="w pg"><div class="dsh"><div class="side"><a class="a" href="#/advdash">داشبورد</a><a>درخواست‌های مشاوره</a><a>تقویم</a><a>مشتریان</a><a>درآمد</a><a>پروفایل</a><a>نظرات</a><a href="#/dash">پنل کاربر ←</a></div>
+<div class="stk"><div class="err" style="background:rgba(212,175,55,.12);border-color:var(--gold);color:var(--text)">وضعیت تأیید مدارک: <b>در انتظار بررسی</b>؛ تا تأیید، پروفایل شما در نتایج نمایش داده نمی‌شود.</div>
+<div class="g g3"><div class="c"><p>درآمد ماه (نمونه)</p><div class="stat">۱۸٬۰۰۰٬۰۰۰</div></div><div class="c"><p>جلسات این ماه</p><div class="stat">۱۲</div></div><div class="c"><p>امتیاز</p><div class="stat">۴٫۸</div></div></div>
+<div class="c"><b>درخواست‌های جدید</b><div class="rw"><span>درخواست مشاوره: برنامه‌ریزی بازنشستگی</span><span><button class="chip on2">پذیرش</button> <button class="chip">رد</button></span></div><div class="rw"><span>درخواست مشاوره: مدیریت ریسک</span><span><button class="chip on2">پذیرش</button> <button class="chip">رد</button></span></div></div>
+<div class="c"><b>تکمیل پروفایل</b><div class="prog"><i style="width:75%"></i></div></div></div></div></div></main>
+
+<main id="search" class="view"><div class="w pg"><h2>مشاوران</h2><div class="sub" id="rk"></div><div class="sg">
+<div class="c fl"><label>جست‌وجو</label><input class="inp" id="fq" placeholder="نام یا تخصص"><label>حوزه تخصص</label><select class="inp" id="fc"><option>همه</option><option>بورس و سهام</option><option>صندوق‌های سرمایه‌گذاری</option><option>برنامه‌ریزی مالی</option><option>مدیریت ریسک</option><option>بازنشستگی</option></select>
+<label>نحوه برگزاری</label><select class="inp" id="fm"><option>همه</option><option>آنلاین</option><option>تلفنی</option><option>حضوری</option></select><label>حداکثر هزینه جلسه: <b id="pv"></b></label><input type="range" id="fp" min="500" max="3000" step="100" value="3000"><label style="margin-top:10px">حداقل امتیاز</label><select class="inp" id="fr"><option value="0">همه</option><option value="4.5">۴٫۵ به بالا</option><option value="4.8">۴٫۸ به بالا</option></select>
+<label>حداقل سابقه</label><select class="inp" id="fe"><option value="0">همه</option><option value="5">۵ سال</option><option value="8">۸ سال</option></select><label>مرتب‌سازی</label><select class="inp" id="fs"><option value="m">مرتبط‌ترین</option><option value="r">امتیاز</option><option value="p">ارزان‌ترین</option><option value="e">سابقه</option></select></div>
+<div><div class="g g3" id="sl" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))"></div><div id="cp" class="c" style="margin-top:20px;display:none;overflow-x:auto"></div></div></div></div></main>
+
+<main id="risk" class="view"><div class="w pg" style="max-width:640px"><h2>پیدا کردن مشاور مناسب</h2><div class="sub">هشت پرسش کوتاه؛ نتیجه فقط برای یافتن مشاور مرتبط‌تر است و توصیه سرمایه‌گذاری نیست.</div><div class="c" id="rq"></div><div class="c" id="rr" style="display:none;margin-top:16px"></div></div></main>
+
+<main id="mag" class="view"><div class="w pg"><h2>مجله سرخطی</h2><div class="sub">آموزش مالی؛ بدون سیگنال و پیش‌بینی.</div><div class="g g3" id="ar"></div></div></main>
+
+<main id="faq" class="view"><div class="w pg" style="max-width:720px"><h2>سؤالات متداول</h2><br><div class="stk">
+<details class="c"><summary>سرخطی چه کاری انجام می‌دهد؟</summary><p>مشاوران مستقل را معرفی می‌کند؛ خودش مشاور مالی نیست و توصیه‌ی سرمایه‌گذاری نمی‌دهد.</p></details>
+<details class="c"><summary>آیا بازدهی تضمین می‌شود؟</summary><p>خیر. هیچ مشاور یا پلتفرمی نمی‌تواند سود را تضمین کند.</p></details>
+<details class="c"><summary>تأیید مشاوران چگونه انجام می‌شود؟</summary><p>[توضیح فرایند احراز هویت و مدارک پس از نهایی شدن الزامات قانونی]</p></details>
+<details class="c"><summary>اگر جلسه برگزار نشد چه می‌شود؟</summary><p>[شرایط لغو و بازپرداخت در قوانین و مقررات درج می‌شود]</p></details></div></div></main>
+
+<main id="legal" class="view"><div class="w pg" style="max-width:720px"><h2>قوانین و اطلاعات حقوقی</h2><br><div class="chips" id="lt"></div><div class="c lg" id="lb"></div></div></main>
+<nav class="bn"><a href="#/">خانه</a><a href="#/search">مشاوران</a><a href="#/risk">ارزیابی ریسک</a><a href="#/dash">جلسات</a><a href="#/dash">پیام‌ها</a><a href="#/login">پروفایل</a></nav>
+<footer><div class="w"><div class="g">
+<div><b>سرخطی</b>بهتر تصمیم بگیر.</div>
+<div><b>سرخطی</b>درباره ما<br>تماس با ما<br><a href="#/faq">سوالات متداول</a></div>
+<div><b>حقوقی</b><a href="#/legal">قوانین و مقررات</a><br><a href="#/legal">حریم خصوصی</a><br><a href="#/legal">افشای ریسک</a></div>
+<div><b>مشاوران</b>ثبت‌نام به عنوان مشاور<br>راهنمای مشاوران</div></div>
+<div class="dis">سرخطی بستری برای اتصال کاربران به مشاوران مستقل است. سرخطی مشاور مالی یا ارائه‌دهنده محصول سرمایه‌گذاری نیست و بازدهی تضمین نمی‌کند. [جایگاه اطلاعات مجوزها و الزامات نظارتی]</div></div></footer>
+
+<script>
+const A=[["م.ر","محمد رضایی","مشاور مالی و سرمایه‌گذاری","۸ سال","۴٫۸","۱۲۴","۱٫۵۰۰٫۰۰۰","امروز",["مدیریت پرتفوی","صندوق‌ها","مدیریت ریسک"],"سرمایه‌گذاری"],
+["س.ک","سارا کاظمی","برنامه‌ریز مالی شخصی","۶ سال","۴٫۷","۸۹","۱٫۲۰۰٫۰۰۰","فردا",["برنامه‌ریزی مالی","بازنشستگی"],"برنامه‌ریزی مالی"],
+["ع.ح","علی حسینی","تحلیلگر بازار سرمایه","۱۰ سال","۴٫۹","۲۱۰","۲٫۰۰۰٫۰۰۰","این هفته",["بورس و سهام","سرمایه‌گذاری بلندمدت"],"بورس و سهام"]];
+const cats=["همه","سرمایه‌گذاری","برنامه‌ریزی مالی","بورس و سهام"];
+const ch=document.getElementById("chips"),ls=document.getElementById("list");
+function draw(c){ch.innerHTML=cats.map(x=>`<button class="chip ${x==c?"on":""}" data-c="${x}">${x}</button>`).join("");
+ls.innerHTML=A.filter(a=>c=="همه"||a[9]==c).map(a=>`<div class="c"><div class="top"><div class="av">${a[0]}</div><div><b>${a[1]}</b><div style="font-size:13px;color:var(--mut)">${a[2]}</div><div class="ver">✓ هویت تأییدشده (نمونه)</div></div></div>
+<div class="meta"><span class="st">★ ${a[4]}</span><span>${a[3]} سابقه</span><span>${a[5]} جلسه</span></div>
+<div class="tg">${a[8].map(t=>`<span>${t}</span>`).join("")}</div>
+<div class="ft"><span>${a[6]} تومان · ${a[7]}</span><a class="btn p" style="padding:6px 14px" href="#/advisor/${A.indexOf(a)+1}">مشاهده پروفایل</a></div></div>`).join("")}
+ch.onclick=e=>{if(e.target.dataset.c)draw(e.target.dataset.c)};draw("همه");
+
+
+const R={"/search":"search","/risk":"risk","/mag":"mag","/faq":"faq","/legal":"legal","/":"home","/advisor":"advisor","/login":"login","/dash":"dash","/advdash":"advdash"};
+
+const dy=["شنبه ۱۵ آبان","یکشنبه ۱۶ آبان","دوشنبه ۱۷ آبان"],sl=["۱۰:۰۰","۱۶:۰۰","۱۸:۳۰"];
+function pick(box,list,cls){box.innerHTML=list.map((t,i)=>`<button class="chip ${i?"":"on2"}">${t}</button>`).join("");box.onclick=e=>{if(e.target.tagName=="BUTTON"){[...box.children].forEach(b=>b.classList.remove("on2"));e.target.classList.add("on2")}}}
+pick(document.getElementById("days"),dy);pick(document.getElementById("slots"),sl);
+document.getElementById("book").onclick=()=>document.getElementById("bm").textContent="درخواست رزرو ثبت شد؛ پس از پرداخت، تأیید می‌شود. (نمونه)";
+document.querySelectorAll(".tabs .chip").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tabs .chip").forEach(x=>x.classList.remove("on"));b.classList.add("on");document.getElementById("reg").style.display=b.dataset.t=="1"?"block":"none"});
+document.getElementById("otp").onclick=()=>{const v=document.querySelector("#login .inp").value;document.getElementById("om").style.display=/^09\d{9}$/.test(v)?"none":"block"};
+
+const fa=n=>Number(n).toLocaleString("fa-IR"),$=i=>document.getElementById(i);
+const ST={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const D=[[1,"محمد رضایی","مشاور مالی و سرمایه‌گذاری","صندوق‌های سرمایه‌گذاری",8,4.8,124,1500,["آنلاین","تلفنی"],["متعادل","محافظه‌کار"]],[2,"سارا کاظمی","برنامه‌ریز مالی شخصی","برنامه‌ریزی مالی",6,4.7,89,1200,["آنلاین"],["محافظه‌کار","متعادل"]],[3,"علی حسینی","تحلیلگر بازار سرمایه","بورس و سهام",10,4.9,210,2000,["آنلاین","حضوری"],["ریسک‌پذیر","متعادل"]],[4,"نیلوفر احمدی","مشاور مدیریت ریسک","مدیریت ریسک",7,4.6,64,1800,["آنلاین","تلفنی"],["محافظه‌کار"]],[5,"رضا مرادی","مشاور بازنشستگی","بازنشستگی",12,4.8,150,1000,["آنلاین","حضوری"],["محافظه‌کار","متعادل"]],[6,"مهسا نوری","مشاور بورس و سهام","بورس و سهام",4,4.5,41,700,["آنلاین"],["ریسک‌پذیر"]]];
+let fav=ST.get("sk_fav",[]),cmp=[],lv=ST.get("sk_risk",null),M=ST.get("sk_m",null);
+const ini=n=>n.split(" ").map(x=>x[0]).join(".");
+function fd(){return D.filter(a=>fav.includes(a[0]))}
+function paintFav(){const f=fd();$("fv").innerHTML=f.map(a=>`<div class="rw"><span>${a[1]}</span><a style="color:var(--teal)" href="#/advisor/${a[0]}">پروفایل</a></div>`).join("");$("fe0").style.display=f.length?"none":"block"}
+function draw2(){$("pv").textContent=fa($("fp").value*1000)+" تومان";
+let q=$("fq").value.trim(),L=D.filter(a=>(!q||(a[1]+a[2]+a[3]).includes(q))&&($("fc").value=="همه"||a[3]==$("fc").value)&&($("fm").value=="همه"||a[8].includes($("fm").value))&&a[7]<=$("fp").value&&a[5]>=+$("fr").value&&a[4]>=+$("fe").value);
+const s=$("fs").value;L.sort((a,b)=>s=="r"?b[5]-a[5]:s=="p"?a[7]-b[7]:s=="e"?b[4]-a[4]:mt(b)-mt(a)||b[5]-a[5]);
+$("sl").innerHTML=L.length?L.map(a=>`<div class="c"><div class="top"><div class="av">${ini(a[1])}</div><div><b>${a[1]}</b><div style="font-size:12px;color:var(--mut)">${a[2]}</div><div class="ver">✓ تأییدشده (نمونه)</div></div><button class="hb" data-f="${a[0]}" aria-label="ذخیره">${fav.includes(a[0])?"♥":"♡"}</button></div>
+<div class="meta"><span class="st">★ ${fa(a[5])}</span><span>${fa(a[4])} سال</span><span>${fa(a[6])} جلسه</span></div>${M||lv?'<span class="pill">تطبیق '+fa(mt(a))+'٪</span> <span style="font-size:12px;color:var(--mut)">'+why(a)+'</span>':""}
+<div class="ft"><span>${fa(a[7]*1000)} تومان</span><a class="btn p" style="padding:6px 14px" href="#/advisor/${a[0]}">پروفایل</a></div><label class="cmp"><input type="checkbox" data-c="${a[0]}" ${cmp.includes(a[0])?"checked":""}> مقایسه</label></div>`).join(""):'<div class="emp" style="grid-column:1/-1">مشاوری با این فیلترها پیدا نشد. فیلترها را کم کنید.</div>';
+const C=D.filter(a=>cmp.includes(a[0]));$("cp").style.display=C.length>1?"block":"none";
+$("cp").innerHTML=C.length>1?'<table class="tb"><tr><th></th>'+C.map(a=>`<th>${a[1]}</th>`).join("")+"</tr>"+[["تخصص",4-1+0],["امتیاز",5],["سابقه",4],["هزینه",7],["برگزاری",8]].map(([t,i])=>`<tr><td>${t}</td>`+C.map(a=>`<td>${i==5?"★ "+fa(a[5]):i==4?fa(a[4])+" سال":i==7?fa(a[7]*1000)+" تومان":i==8?a[8].join("، "):a[3]}</td>`).join("")+"</tr>").join("")+"</table>":""}
+document.querySelectorAll(".fl .inp,.fl input").forEach(e=>e.oninput=draw2);
+$("sl").onclick=e=>{const f=+e.target.dataset.f;if(f){fav=fav.includes(f)?fav.filter(x=>x!=f):[...fav,f];ST.set("sk_fav",fav);draw2();paintFav()}};
+$("sl").onchange=e=>{const c=+e.target.dataset.c;if(c){if(e.target.checked){if(cmp.length>=3){e.target.checked=false;return}cmp.push(c)}else cmp=cmp.filter(x=>x!=c);draw2()}};
+$("rk").textContent=lv?"پروفایل ریسک شما: "+lv+" — نتایج بر همین اساس مرتب شده‌اند.":"برای نتایج مرتبط‌تر، ارزیابی ریسک را کامل کنید.";draw2();paintFav();
+// Jalali booking days (Friday skipped)
+(()=>{const f=new Intl.DateTimeFormat("fa-IR-u-ca-persian",{weekday:"long",day:"numeric",month:"long"}),o=[];for(let i=1;o.length<6;i++){const d=new Date(Date.now()+i*864e5);if(d.getDay()!=5)o.push(f.format(d))}pick($("days"),o)})();
+// risk form
+const RQ=[["برای چه موضوعی مشاوره می‌خواهید؟",["بورس و سهام","صندوق‌های سرمایه‌گذاری","برنامه‌ریزی مالی","مدیریت ریسک","بازنشستگی"]],["بودجه‌ی هر جلسه؟",["تا ۱ میلیون تومان","تا ۲ میلیون تومان","بیش از ۲ میلیون"]],["نحوه‌ی برگزاری؟",["آنلاین","تلفنی","حضوری"]],["افق سرمایه‌گذاری شما؟",["کمتر از ۱ سال","۱ تا ۵ سال","بیش از ۵ سال"]],["اگر ارزش سرمایه ۲۰٪ کم شود؟",["نگران می‌شوم و خارج می‌شوم","صبر می‌کنم","فرصت می‌بینم"]],["تجربه‌ی سرمایه‌گذاری؟",["ندارم","متوسط","زیاد"]],["اولویت اصلی؟",["حفظ سرمایه","تعادل","رشد"]],["سرمایه چه سهمی از دارایی شماست؟",["بخش عمده","بخشی","سهم کوچک"]]],ra=[];
+$("rq").innerHTML=RQ.map((q,i)=>`<div class="qq"><b>${fa(i+1)}. ${q[0]}</b><div class="chips" data-q="${i}">${q[1].map((t,j)=>`<button class="chip" data-j="${j+1}">${t}</button>`).join("")}</div></div>`).join("")+'<button class="btn p" id="rs">مشاهده نتیجه</button>';
+$("rq").onclick=e=>{const p=e.target.parentNode;if(e.target.dataset.j){[...p.children].forEach(x=>x.classList.remove("on"));e.target.classList.add("on");ra[+p.dataset.q]=+e.target.dataset.j}};
+$("rs").onclick=()=>{if(ra.filter(Boolean).length<8){$("rr").style.display="block";$("rr").innerHTML='<div class="err">لطفاً به همه‌ی پرسش‌ها پاسخ دهید.</div>';return}const t=ra.slice(3).reduce((a,b)=>a+b,0);lv=t<=8?"محافظه‌کار":t<=11?"متعادل":"ریسک‌پذیر";ST.set("sk_risk",lv);M={cat:RQ[0][1][ra[0]-1],cap:[1000,2000,3000][ra[1]-1],mode:RQ[2][1][ra[2]-1]};ST.set("sk_m",M);$("rk").textContent="پروفایل ریسک شما: "+lv+" — نتایج بر همین اساس مرتب شده‌اند.";draw2();$("rr").style.display="block";$("rr").innerHTML=`<h3>پروفایل شما: ${lv}</h3><p>این نتیجه توصیف ترجیحات شماست، نه توصیه‌ی سرمایه‌گذاری.</p><a class="btn p" href="#/search">مشاهده مشاوران مرتبط</a>`};
+// magazine, legal
+const AR=[["سرمایه‌گذاری","چگونه مشاور مالی مناسب خود را انتخاب کنیم؟","۵ دقیقه"],["آموزش مالی","تفاوت مشاوره سرمایه‌گذاری با سیگنال‌فروشی","۶ دقیقه"],["بازار سرمایه","قبل از سرمایه‌گذاری چه اطلاعاتی لازم است؟","۷ دقیقه"],["مدیریت ریسک","ریسک‌پذیری خود را چگونه بسنجیم؟","۴ دقیقه"],["مدیریت مالی شخصی","بودجه‌بندی ماهانه از کجا شروع می‌شود؟","۵ دقیقه"],["صندوق‌ها","صندوق‌های سرمایه‌گذاری را ساده بشناسیم","۸ دقیقه"]];
+$("ar").innerHTML=AR.map(a=>`<a class="c" href="#/article/${AR.indexOf(a)}"><span class="pill">${a[0]}</span><h3>${a[1]}</h3><p>زمان مطالعه: ${a[2]} (متن نمونه)</p></a>`).join("");
+const LG={"قوانین و مقررات":"[متن قوانین استفاده از خدمات]\nسرخطی بستر معرفی مشاوران مستقل است و طرف قرارداد مشاوره نیست.","حریم خصوصی":"[سیاست حریم خصوصی و رضایت کاربر]\nداده‌های مالی فقط با رضایت شما و برای تطبیق مشاور استفاده می‌شود.","افشای ریسک":"سرمایه‌گذاری با ریسک همراه است و ارزش آن ممکن است کاهش یابد. هیچ بازدهی تضمین نمی‌شود.","شرایط مشاوران":"[شرایط همکاری، احراز هویت و مدارک مشاوران]","مجوزها و الزامات نظارتی":"[محل درج اطلاعات مجوزها پس از دریافت و تأیید؛ هیچ مجوزی ادعا نشده است.]"};
+$("lt").innerHTML=Object.keys(LG).map((k,i)=>`<button class="chip ${i?"":"on"}">${k}</button>`).join("");$("lb").textContent=Object.values(LG)[0];
+$("lt").onclick=e=>{if(e.target.tagName=="BUTTON"){[...$("lt").children].forEach(x=>x.classList.remove("on"));e.target.classList.add("on");$("lb").textContent=LG[e.target.textContent]}};
+
+const fy=n=>n.toLocaleString("fa-IR",{useGrouping:false});
+function mt(a){return Math.min(98,20+(M&&a[3]==M.cat?30:0)+(M&&a[7]<=M.cap?20:0)+(M&&a[8].includes(M.mode)?10:0)+(lv&&a[9].includes(lv)?20:0))}
+function why(a){const r=[];if(M&&a[3]==M.cat)r.push("هم‌حوزه");if(M&&a[7]<=M.cap)r.push("در بودجه");if(M&&a[8].includes(M.mode))r.push(M.mode);if(lv&&a[9].includes(lv))r.push("ریسک «"+lv+"»");return r.join(" · ")}
+const TX=[["انتخاب مشاور","معیارها: تخصص مرتبط با نیاز، سابقه‌ی قابل بررسی، شفافیت هزینه و بی‌طرفی. از مشاوری که سود تضمین می‌کند دوری کنید.","قبل از جلسه، هدف، افق زمانی و میزان ریسکی را که می‌پذیرید بنویسید."],["مشاوره یا سیگنال","مشاوره وضعیت شخصی شما را می‌سنجد؛ سیگنال یک توصیه‌ی عمومی و عجولانه است.","مشاور خوب دلیل پیشنهادش را توضیح می‌دهد و ریسک‌ها را پنهان نمی‌کند."],["پیش از سرمایه‌گذاری","اول صندوق اضطراری و بدهی‌ها را مشخص کنید؛ بعد هدف و افق زمانی.","فقط با پولی سرمایه‌گذاری کنید که در کوتاه‌مدت به آن نیاز ندارید."],["ریسک‌پذیری","ریسک‌پذیری یعنی توان و تمایل شما برای تحمل افت ارزش دارایی.","افق زمانی، درآمد و تجربه‌ی شما در آن مؤثرند؛ ارزیابی را گاهی تکرار کنید."],["بودجه‌بندی","درآمد، هزینه‌های ثابت و پس‌انداز را جدا کنید.","یک قاعده‌ی ساده: ابتدا پس‌انداز، سپس هزینه‌های متغیر."],["صندوق‌ها","صندوق سرمایه‌گذاری سبدی مدیریت‌شده است و نوع دارایی‌های آن ریسک را تعیین می‌کند.","قبل از ورود، اساسنامه، هزینه‌ها و نوع صندوق را بخوانید."]];
+function showArt(i){const a=AR[i]||AR[0],t=TX[i]||TX[0];$("an").textContent=a[1];$("ac").textContent=a[0];$("at").textContent=a[1];$("ab").innerHTML=`<p>${t[1]}</p><br><p>${t[2]}</p>`}
+let cur=D[0],sd=0,ss=null,DAYS=[];
+function slotsFor(){const P=["۰۹:۰۰","۱۰:۳۰","۱۴:۰۰","۱۶:۰۰","۱۸:۳۰","۲۰:۰۰"];$("slots").innerHTML=P.map((t,j)=>{const ok=(cur[0]*7+sd*3+j*5)%3!=0;return `<button class="chip" data-t="${t}" ${ok?"":"disabled style='text-decoration:line-through;opacity:.5'"}>${t}</button>`}).join("");ss=null}
+function showAdv(id){const a=D.find(x=>x[0]==id)||D[0];cur=a;$("bn").textContent=a[1];$("pa").textContent=ini(a[1]);$("pn").textContent=a[1];$("pt").textContent=a[2];
+$("pm").innerHTML=`<span class="st">★ ${fa(a[5])}</span><span>${fa(a[4])} سال سابقه</span><span>${fa(a[6])} جلسه</span>`;
+$("pb").textContent=`حوزه‌ی اصلی: ${a[3]}. مشاوره بر پایه‌ی شناخت نیاز، افق زمانی و ریسک‌پذیری شما؛ بدون وعده‌ی سود. (متن نمونه)`;
+$("pg").innerHTML=[a[3],...a[9].map(x=>"ریسک "+x)].map(t=>`<span>${t}</span>`).join("");
+$("pe").innerHTML=`<div class="rw"><span>مشاور مستقل ${a[3]}</span><span style="color:var(--mut)">${fy(1405-a[4])} تا اکنون</span></div>`;
+$("pw").textContent=(M||lv)&&why(a)?"تطبیق "+fa(mt(a))+"٪ بر اساس پاسخ‌های شما: "+why(a)+".":"با تکمیل پرسشنامه، دلیل تطبیق این مشاور با نیاز شما اینجا نمایش داده می‌شود.";
+$("ps").textContent=`جلسه‌ی ۶۰ دقیقه‌ای · ${fa(a[7]*1000)} تومان · ${a[8].join("، ")}`;$("pf").textContent=fav.includes(a[0])?"♥":"♡";
+const f=new Intl.DateTimeFormat("fa-IR-u-ca-persian",{weekday:"long",day:"numeric",month:"long"});DAYS=[];for(let i=1;DAYS.length<6;i++){const d=new Date(Date.now()+i*864e5);if(d.getDay()!=5)DAYS.push(f.format(d))}
+sd=0;$("days").innerHTML=DAYS.map((t,i)=>`<button class="chip ${i?"":"on2"}" data-d="${i}">${t}</button>`).join("");slotsFor();$("bm").textContent=""}
+$("days").onclick=e=>{if(e.target.dataset.d){sd=+e.target.dataset.d;[...$("days").children].forEach(b=>b.classList.remove("on2"));e.target.classList.add("on2");slotsFor()}};
+$("slots").onclick=e=>{if(e.target.dataset.t&&!e.target.disabled){ss=e.target.dataset.t;[...$("slots").children].forEach(b=>b.classList.remove("on2"));e.target.classList.add("on2")}};
+$("book").onclick=()=>{$("bm").textContent=ss?`درخواست رزرو با ${cur[1]} برای ${DAYS[sd]} ساعت ${ss} ثبت شد؛ پس از پرداخت تأیید می‌شود. (نمونه)`:"لطفاً یک ساعت انتخاب کنید."};
+$("pf").onclick=()=>{fav=fav.includes(cur[0])?fav.filter(x=>x!=cur[0]):[...fav,cur[0]];ST.set("sk_fav",fav);$("pf").textContent=fav.includes(cur[0])?"♥":"♡";paintFav();draw2()};
+function route(){const h=location.hash.slice(1),m=h.match(/^\/(advisor|article)\/(\d+)/);let id=m?m[1]:R[h];if(!id&&h&&h[0]!="/")return;id=id||"home";document.querySelectorAll(".view").forEach(v=>v.classList.toggle("on",v.id==id));
+try{if(id=="advisor")showAdv(m?m[2]:1);if(id=="article")showArt(m?+m[2]:0);draw2()}catch(e){}scrollTo(0,0)}
+addEventListener("hashchange",route);route();
+</script>
+</body>
+</html>
